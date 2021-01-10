@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gender Attitudes Explorer</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div id="scaleContainerGroup" class="scaleContainerGroup">
+            <div id="abortion_lab" class="scaleContainer scaleSelected" onclick="selectLabel(this.id, `abscale`)">
+                Abortion
+            </div>
+            <div id="sexatt_lab" class="scaleContainer" onclick="selectLabel(this.id, `sexatt`)">
+                Sexual Behavior
+            </div>
+            <div id="genrole_lab" class="scaleContainer" onclick="selectLabel(this.id, `genrole`)">
+                Gender Roles
+            </div>
+            <div id="famresp_lab" class="scaleContainer" onclick="selectLabel(this.id, `famresp`)">
+                Family Responsibilities
+            </div>
+        </div>
+        <div class="chartContainer">
+            <div class="chartFilters" id="chartFilters">
+                <div class="chartFilterContainer">
+                    <div class="chartFilter filter1" id="gender" onclick="populateMenu(`gender_list`)"> Gender <span class="filterCaret" style="font-size: 10px"> &#x25bc; </span> </div>
+                    <div class="bagranting_list filter_list" id="gender_list">
+                        <div class="OkButton"> OK </div>
+                        <div class="filter_item_container" onclick="updateParameters(`genders`, `Men`, [`75_101`])">
+                            <span class="enabled_check" id="75_101"> ✓ </span>
+                            <span class="filter_item"> Men </span>
+                        </div>
+                        <div class="filter_item_container" onclick="updateParameters(`genders`, `Women`, [`75_100`])">
+                            <span class="enabled_check" id="75_100"> ✓ </span>
+                            <span class="filter_item"> Women </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chartFilterContainer">
+                    <div class="chartFilter filter4" id="polviews" onclick="populateMenu(`polview_list`)"> Political Identity <span class="filterCaret" style="font-size: 10px"> &#x25bc; </span> </div>
+                    <div class="pubpriv_list filter_list" id="polview_list">
+                        <div class="OkButton"> OK </div>
+                        <div class="filter_item_container" onclick="updateParameters(`pol`, `Conservative`, [`50_101`])">
+                            <span class="enabled_check" id="50_101"> ✓ </span>
+                            <span class="filter_item"> Conservative </span>
+                        </div>
+                        <div class="filter_item_container" onclick="updateParameters(`pol`, `Liberal`, [`50_102`])">
+                            <span class="enabled_check" id="50_102"> ✓ </span>
+                            <span class="filter_item"> Liberal </span>
+                        </div>
+                        <div class="filter_item_container" onclick="updateParameters(`pol`, `Moderate`, [`50_103`])">
+                            <span class="enabled_check" id="50_103"> ✓ </span>
+                            <span class="filter_item"> Moderate </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chartFilterContainer">
+                    <div class="chartFilter filter4" id="generation" onclick="populateMenu(`generation_test`)"> Generation <span class="filterCaret" style="font-size: 10px"> &#x25bc; </span> </div>
+                    <div class="pubpriv_list filter_list" id="generation_test">
+                        <div class="OkButton"> OK </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Lost`, [`60_101`])">
+                            <span class="enabled_check" id="60_101"> ✓ </span>
+                            <span class="filter_item"> Lost Generation (1890 - 1909) </span>
+                        </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Greatest`, [`60_102`])">
+                            <span class="enabled_check" id="60_102"> ✓ </span>
+                            <span class="filter_item"> Greatest Generation (1910 - 1927) </span>
+                        </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Silent`, [`60_103`])">
+                            <span class="enabled_check" id="60_103"> ✓ </span>
+                            <span class="filter_item"> Silent Generation (1928 - 1945) </span>
+                        </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Boomers`, [`60_104`])">
+                            <span class="enabled_check" id="60_104"> ✓ </span>
+                            <span class="filter_item"> Baby Boomers (1946 - 1964) </span>
+                        </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `GenX`, [`60_105`])">
+                            <span class="enabled_check" id="60_105"> ✓ </span>
+                            <span class="filter_item"> Generation X (1965 - 1980) </span>
+                        </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Millenial`, [`60_106`])">
+                            <span class="enabled_check" id="60_106"> ✓ </span>
+                            <span class="filter_item"> Millenials (1981 - 1996) </span>
+                        </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `GenZ`, [`60_107`])">
+                            <span class="enabled_check" id="60_107"> ✓ </span>
+                            <span class="filter_item"> Generation Z (1997 - 2021) </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonContainer" style="display: inline-block;">
+                    <button class="button_c button_b" onclick="selectData()"> Generate </button>
+                    <button class="button_c button_d" onclick="clearAll()"> Reset </button>
+                </div>
+            </div>
+            <div style="height: 700px;">
+                <canvas class="myChart" id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="chartSearchContainer">
+        <input type="text" style="box-sizing: border-box; border-radius: 5px" id="myInput" onkeyup="filterUni()" placeholder="Search..">
+        <table id="uniTableAll">
+            <thead style="margin-right: -2px;">
+                <tr class="uniTableHeader" id="uniTableHeader">
+                    <th class="trFirst" style="padding: 20px;"> </th>
+                    <th class="trSecond"> Curves </th>
+                </tr>
+            </thead>
+            <tbody id="uniTable" class="uniTable">
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script> -->
+</body>
+
+</html>
