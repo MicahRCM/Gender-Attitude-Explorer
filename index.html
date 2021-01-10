@@ -120,19 +120,74 @@
                 <canvas class="myChart" id="myChart"></canvas>
             </div>
         </div>
-    </div>
-    <div class="chartSearchContainer">
-        <input type="text" style="box-sizing: border-box; border-radius: 5px" id="myInput" onkeyup="filterUni()" placeholder="Search..">
-        <table id="uniTableAll">
-            <thead style="margin-right: -2px;">
-                <tr class="uniTableHeader" id="uniTableHeader">
-                    <th class="trFirst" style="padding: 20px;"> </th>
-                    <th class="trSecond"> Curves </th>
-                </tr>
-            </thead>
-            <tbody id="uniTable" class="uniTable">
-            </tbody>
-        </table>
+        <div class="extraInfoContainer">
+            <div id="abortion_extra">
+                <h3> Abortion Attitude Question Phrasing (α = 0.89) </h3>
+                <ol>
+                    <li>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the family has a very low income and cannot afford any more children? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/604/vshow" rel="nofollow">abpoor</a>)</p>
+                    </li>
+                    <li>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the woman's own health is seriously endangered by the pregnancy? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/603/vshow" rel="nofollow">abhlth</a>)</p>
+                    </li>
+                    <li>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she is married and does not want any more children? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/602/vshow" rel="nofollow">abnomore</a>)</p>
+                    </li>
+                    <li>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if there is a strong chance of serious defect in the baby? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/601/vshow" rel="nofollow">abdefect</a>)</p>
+                    </li>
+                    <li>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she became pregnant as a result of rape? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/605/vshow" rel="nofollow">abrape</a>)</p>
+                    </li>
+                    <li>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she is not married and does not want to marry the man? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/606/vshow" rel="nofollow">absingle</a>)</p>
+                    </li>
+                    <li>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the woman wants it for any reason? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/607/vshow" rel="nofollow">abany</a>)</p>
+                    </li>
+                </ol>
+            </div>
+            <div id="sexatt_extra" class="hide">
+                <h3> Sexual Behavior Attitudes Question Phrasing (α = 0.66) </h3>
+                <ol>
+                    <li>
+                        <p>Would you be for or against sex education in the public schools? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/626/vshow" rel="nofollow">sexeduc</a>)</p>
+                    </li>
+                    <li>
+                        <p>There's been a lot of discussion about the way morals and attitudes about sex are changing in this country. If a man and woman have sex relations before marriage, do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/631/vshow" rel="nofollow">premarsx</a>)</p>
+                    </li>
+                    <li>
+                        <p>Questions associated with this variable: There's been a lot of discussion about the way morals and attitudes about sex are changing in this country. If a man and woman have sex relations before marriage, do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? A. What if they are in their early teens, say 14 to 16 years old? In that case, do you think sex relations before marriage are always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/632/vshow" rel="nofollow">teensex</a>)</p>
+                    </li>
+                    <li>
+                        <p>What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/634/vshow" rel="nofollow">homosex</a>)</p>
+                    </li>
+                    <li>
+                        <p>What is your opinion about a married person having sexual relations with someone other than the marriage partner--is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/633/vshow" rel="nofollow">xmarsex</a>)</p>
+                    </li>
+                </ol>
+            </div>
+            <div id="genrole_extra" class="hide">
+                <h3> Gender Roles Attitudes Question Phrasing </h3>
+                <ol>
+                    <li>Tell me if you agree or disagree with this statement: Most men are better suited emotionally for politics than are most women. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/591/vshow" rel="nofollow">fepol</a>)</li>
+                </ol>
+            </div>
+            <div id="famresp_extra" class="hide">
+                <h3> Family Responsibility Attitudes Question Phrasing (α‎ = 0.73) </h3>
+                <ol>
+                    <li>
+                        <p>A working mother can establish just as warm and secure a relationship with her children as a mother who does not work. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/703/vshow" rel="nofollow">fechld</a>)</p>
+                    </li>
+                    <li>
+                        <p>A preschool child is likely to suffer if his or her mother works. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/705/vshow" rel="nofollow">fepresch</a>)</p>
+                    </li>
+                    <li>
+                        <p>It is much better for everyone involved if the man is the achiever outside the home and the woman takes care of the home and family. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/706/vshow" rel="nofollow">fefam</a>)</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
     </div>
     <script type="text/javascript" src="index.js"></script>

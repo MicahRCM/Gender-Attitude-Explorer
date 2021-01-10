@@ -143,7 +143,6 @@ const makeDataGroups = (dataG) => {
 }
 
 const changeStat = (id) => {
-	console.log(id)
 	scatterChart.data.datasets.forEach(dataset => {
 		dataset["data"].forEach(data => {
 			data.y = data[id]
@@ -319,8 +318,11 @@ const selectLabel = (id, dataset) => {
 	let selectedClass = "scaleSelected"
 	label_ids.forEach(name => {
 		document.getElementById(name + "_lab").className = defaultClass
+		document.getElementById(name + "_extra").className = "hide"
 	})
 	document.getElementById(id).classList.add(selectedClass)
+	console.log(id)
+	document.getElementById(id.slice(0, -4) + "_extra").className = ""
 	clearAll()
 	active_parameters = {
     active_genders: [],
