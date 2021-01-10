@@ -238,7 +238,7 @@ var scatterChart = new Chart(ctx, {
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Score',
+                    labelString: 'Mean / Std. Dev / Freq',
                     fontSize: 16
                 },
                 ticks: {
