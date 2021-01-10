@@ -6,7 +6,9 @@ let all_data = {
 } 
 
 const label_ids = ["abortion", "sexatt", "genrole", "famresp"]
+const stat_ids = ["mean", "sd", "freq"]
 let active_category = "abscale"
+let active_metric = "M"
 
 let active_parameters = {
     active_genders: [],
@@ -129,13 +131,33 @@ const makeDataGroups = (dataG) => {
         }
         groups.find(group => group.label === d["T"]).data.push({
             x: d["Y"],
-            y: d["M"],
-            f: d["F"],
-            t: d["T"]
+            y: d[active_metric],
+            M: d["M"],
+            F: d["F"],
+            S: d["S"],
+            T: d["T"]
         })
 
     })
     convertToChartObject(groups)
+}
+
+const changeStat = (id) => {
+	console.log(id)
+	scatterChart.data.datasets.forEach(dataset => {
+		dataset["data"].forEach(data => {
+			data.y = data[id]
+		})
+	})
+	if (id == "M") {
+		scatterChart.options.scales.yAxes[0].ticks.beginAtZero = true
+		scatterChart.options.scales.yAxes[0].ticks.suggestedMax = 10
+	} else {
+		scatterChart.options.scales.yAxes[0].ticks.beginAtZero  = false
+		scatterChart.options.scales.yAxes[0].ticks.suggestedMax = false
+	}
+	active_metric = id
+	scatterChart.update()
 }
 
 const convertToChartObject = (data) => {
@@ -260,10 +282,11 @@ var scatterChart = new Chart(ctx, {
                     var score = dataset.data[index];
 
                     // output += "Name: " + school.Name + "\n | \n";
-                    output += score.t + ": ", "\n + \n"
+                    output += score.T + ": ", "\n + \n"
                     output += "Year: " + score.x + "\n | \n"
-                    output += "Score: " + score.y + "\n | \n"
-                    output += "Freq(n): " + score["f"]
+                    output += "Mean: " + score["M"] + "\n | \n"
+                    output += "Std. Dev: " + score["S"] + "\n | \n"
+                    output += "Freq(n): " + score["F"]
                     return output;
                 }
             }
@@ -306,6 +329,17 @@ const selectLabel = (id, dataset) => {
 }
 	selectData(dataset)
 	active_category = id
+}
+
+const selectStat = (id, stat) => {
+	let defaultClass = "statContainer"
+	let selectedClass = "statContainerSelected"
+	stat_ids.forEach(name => {
+		document.getElementById(name + "_lab").className = defaultClass
+	})
+	document.getElementById(id).classList.add(selectedClass)
+	changeStat(stat)
+
 }
 
 selectData()

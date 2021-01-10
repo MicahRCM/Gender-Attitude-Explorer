@@ -332,6 +332,18 @@ input[type=number] {
     border-radius: 8px;
 }
 
+.statContainer {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.statContainer:hover {
+    background: #dcdcdc;
+    cursor: pointer;
+}
+
 .scaleContainer:hover {
     background: #eee;
     cursor: pointer;
@@ -347,15 +359,33 @@ input[type=number] {
     line-height: 1;
 }
 
+.statisticTypeGroup {
+    float: right;
+    margin-top: 10px;
+}
+
 .scaleSelected {
     background: rgb(56, 97, 251);
     color: white;
 }
 
+
 .scaleSelected:hover {
     background: rgb(56, 97, 251);
     cursor: auto;
 }
+
+
+.statContainerSelected {
+    background: #bbbaba;
+}
+
+.statContainerSelected:hover {
+    background: #bbbaba;
+    cursor: auto;
+}
+
+
 
 
 

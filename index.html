@@ -31,6 +31,17 @@
             <div id="famresp_lab" class="scaleContainer" onclick="selectLabel(this.id, `famresp`)">
                 Family Responsibilities
             </div>
+            <div class="statisticTypeGroup">
+                <div id="mean_lab" class="statContainer statContainerSelected" onclick="selectStat(this.id, `M`)">
+                    Mean
+                </div>
+                <div id="sd_lab" class="statContainer" onclick="selectStat(this.id, `S`)">
+                    Std. Dev.
+                </div>
+                <div id="freq_lab" class="statContainer" onclick="selectStat(this.id, `F`)">
+                    Freq.
+                </div>
+            </div>
         </div>
         <div class="chartContainer">
             <div class="chartFilters" id="chartFilters">
