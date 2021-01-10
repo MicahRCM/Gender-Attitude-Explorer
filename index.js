@@ -221,7 +221,8 @@ var scatterChart = new Chart(ctx, {
                     fontSize: 16
                 },
                 ticks: {
-                    beginAtZero: false,
+                    beginAtZero: true,
+                    suggestedMax: 10,
                     fontSize: 14
                 }
             }],
@@ -239,6 +240,8 @@ var scatterChart = new Chart(ctx, {
                 },
                 ticks: {
                     beginAtZero: false,
+                    min: 1972,
+                    max: 2020,
                     fontSize: 14,
                 }
             }]
