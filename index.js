@@ -11,7 +11,7 @@ let active_category = "abscale"
 let active_parameters = {
     active_genders: [],
     active_pol: [],
-    active_generation: ["Silent", "Lost", "Greatest", "Boomers", "GenZ", "Millenial", "GenX"]
+    active_generation: ["Lost", "Greatest", "Silent", "Boomers", "GenX", "Millenial", "GenZ"]
 }
 const SAFE_CLASSES = ['.enabled_check', '.filter_item', '.filter_list', '.filter_item_container', '.usnewsrank_cont', '.usnewsrank_input_c', '.inputlabel', '.input_m']
 const COLORS = ['#e6194b', '#3cb44b', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080']
