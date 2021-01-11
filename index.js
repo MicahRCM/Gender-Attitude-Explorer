@@ -175,13 +175,19 @@ const convertToChartObject = (data) => {
         data[i]["backgroundColor"] = randColor
         data[i]["borderColor"] = randColor
     }
-
     updateChart(data)
 }
 
+// Prevents repeat groups from being added to dataset
 const updateChart = (data) => {
+	let labels = []
+	// Grabbing all current labels being used
+	scatterChart.data.datasets.forEach(set => {
+		labels.push(set["label"])
+	})
+
     data.forEach(d => {
-        if (!scatterChart.data.datasets.includes(d["label"])) {
+        if (!labels.includes(d["label"])) {
             scatterChart.data.datasets.push(d)
         }
     })
