@@ -15,6 +15,9 @@ let active_parameters = {
     active_pol: [],
     active_generation: ["Lost", "Greatest", "Silent", "Boomers", "GenX", "Millenial", "GenZ"]
 }
+
+let saved_parameters = []
+
 const SAFE_CLASSES = ['.enabled_check', '.filter_item', '.filter_list', '.filter_item_container', '.usnewsrank_cont', '.usnewsrank_input_c', '.inputlabel', '.input_m']
 const COLORS = ['#e6194b', '#3cb44b', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080']
 const CHECK_IDS = ['75_101', '75_100',`50_101`, `50_102`, `50_103`, `60_101`, `60_102`, `60_103`, `60_104`, `60_105`, `60_106`, `60_107`]
@@ -61,9 +64,9 @@ const checkTheCheck = (n, on, off) => {
 }
 
 // Filter parent function for removing non-selected data from master set
-const selectData = (dataset = "abscale") => {
+const selectData = () => {
 	let params = active_parameters
-	let data = all_data[dataset]
+	let data = all_data[active_category]
     // Assigns array of keys of passed in parameters
     let keys = Object.keys(params)
     // Loops through all keys, filtering values that don't share sibling value
@@ -321,7 +324,6 @@ const selectLabel = (id, dataset) => {
 		document.getElementById(name + "_extra").className = "hide"
 	})
 	document.getElementById(id).classList.add(selectedClass)
-	console.log(id)
 	document.getElementById(id.slice(0, -4) + "_extra").className = ""
 	clearAll()
 	active_parameters = {
@@ -330,7 +332,7 @@ const selectLabel = (id, dataset) => {
     active_generation: ["Silent", "Lost", "Greatest", "Boomers", "GenZ", "Millenial", "GenX"]
 }
 	selectData(dataset)
-	active_category = id
+	active_category= id.slice(0, -4) 
 }
 
 const selectStat = (id, stat) => {
