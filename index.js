@@ -87,7 +87,6 @@ const selectData = () => {
 
 const keyFilter = (keys, data) => {
     let filteredData = []
-    console.log()
     if (keys.length > 0) {
         for (let i = 0; i < keys.length; i++) {
             filteredData = filteredData.concat(dataFilter(keys[i], data))
@@ -99,7 +98,6 @@ const keyFilter = (keys, data) => {
 }
 
 const dataFilter = (keyn, data) => {
-	console.log(keyn, data)
     let filteredData = []
     data.forEach(d => {
     	if (typeof(d["T"]) == 'string') {
@@ -333,7 +331,6 @@ const selectLabel = (id, dataset) => {
     active_pol: [],
     active_generation: ["Silent", "Lost", "Greatest", "Boomers", "GenZ", "Millenial", "GenX"]
 }
-	console.log(id, dataset)
 	selectData(dataset)
 	active_category= id.slice(0, -4) 
 }
