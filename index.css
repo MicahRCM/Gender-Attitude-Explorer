@@ -379,9 +379,9 @@ input[type=number] {
 
 
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1111px) {
     .mainContainer {
-        width: 1000px;
+        width: 1111px;
     }
 
     body {
