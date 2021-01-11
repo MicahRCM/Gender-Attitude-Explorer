@@ -46,67 +46,59 @@
         <div class="chartContainer">
             <div class="chartFilters" id="chartFilters">
                 <div class="chartFilterContainer">
-                    <div class="chartFilter filter1" id="gender" onclick="populateMenu(`gender_list`)"> Gender <span class="filterCaret" style="font-size: 10px"> &#x25bc; </span> </div>
-                    <div class="bagranting_list filter_list" id="gender_list">
-                        <div class="OkButton"> OK </div>
-                        <div class="filter_item_container" onclick="updateParameters(`genders`, `Men`, [`75_101`])">
-                            <span class="enabled_check" id="75_101"> ✓ </span>
-                            <span class="filter_item"> Men </span>
-                        </div>
-                        <div class="filter_item_container" onclick="updateParameters(`genders`, `Women`, [`75_100`])">
-                            <span class="enabled_check" id="75_100"> ✓ </span>
-                            <span class="filter_item"> Women </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="chartFilterContainer">
-                    <div class="chartFilter filter4" id="polviews" onclick="populateMenu(`polview_list`)"> Political Identity <span class="filterCaret" style="font-size: 10px"> &#x25bc; </span> </div>
+                    <div class="chartFilter filter4" id="polviews" onclick="populateMenu(`polview_list`)"> Filters <span class="filterCaret" style="font-size: 10px"> &#x25bc; </span> </div>
                     <div class="pubpriv_list filter_list" id="polview_list">
-                        <div class="OkButton"> OK </div>
-                        <div class="filter_item_container" onclick="updateParameters(`pol`, `Conservative`, [`50_101`])">
+                        <div class="filter_header"> Political Alignment </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`pol`, `Conservative`, [`50_101`])">
                             <span class="enabled_check" id="50_101"> ✓ </span>
                             <span class="filter_item"> Conservative </span>
                         </div>
-                        <div class="filter_item_container" onclick="updateParameters(`pol`, `Liberal`, [`50_102`])">
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`pol`, `Liberal`, [`50_102`])">
                             <span class="enabled_check" id="50_102"> ✓ </span>
                             <span class="filter_item"> Liberal </span>
                         </div>
-                        <div class="filter_item_container" onclick="updateParameters(`pol`, `Moderate`, [`50_103`])">
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`pol`, `Moderate`, [`50_103`])">
                             <span class="enabled_check" id="50_103"> ✓ </span>
                             <span class="filter_item"> Moderate </span>
                         </div>
-                    </div>
-                </div>
-                <div class="chartFilterContainer">
-                    <div class="chartFilter filter4" id="generation" onclick="populateMenu(`generation_test`)"> Generation <span class="filterCaret" style="font-size: 10px"> &#x25bc; </span> </div>
-                    <div class="pubpriv_list filter_list" id="generation_test">
-                        <div class="OkButton"> OK </div>
+                        <hr>
+                        <div class="filter_header"> Gender </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`genders`, `Men`, [`75_101`])">
+                            <span class="enabled_check" id="75_101"> ✓ </span>
+                            <span class="filter_item"> Men </span>
+                        </div>
+                        <div class="filter_item_container item_wide" onclick="updateParameters(`genders`, `Women`, [`75_100`])">
+                            <span class="enabled_check" id="75_100"> ✓ </span>
+                            <span class="filter_item"> Women </span>
+                        </div>
+                        <hr>
+                        <div class="filter_header"> Generations </div>
                         <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Lost`, [`60_101`])">
-                            <span class="enabled_check" id="60_101"> ✓ </span>
+                            <span class="enabled_check showCheck" id="60_101"> ✓ </span>
                             <span class="filter_item"> Lost Generation (1890 - 1909) </span>
                         </div>
                         <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Greatest`, [`60_102`])">
-                            <span class="enabled_check" id="60_102"> ✓ </span>
+                            <span class="enabled_check showCheck" id="60_102"> ✓ </span>
                             <span class="filter_item"> Greatest Generation (1910 - 1927) </span>
                         </div>
                         <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Silent`, [`60_103`])">
-                            <span class="enabled_check" id="60_103"> ✓ </span>
+                            <span class="enabled_check showCheck" id="60_103"> ✓ </span>
                             <span class="filter_item"> Silent Generation (1928 - 1945) </span>
                         </div>
                         <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Boomers`, [`60_104`])">
-                            <span class="enabled_check" id="60_104"> ✓ </span>
+                            <span class="enabled_check showCheck" id="60_104"> ✓ </span>
                             <span class="filter_item"> Baby Boomers (1946 - 1964) </span>
                         </div>
                         <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `GenX`, [`60_105`])">
-                            <span class="enabled_check" id="60_105"> ✓ </span>
+                            <span class="enabled_check showCheck" id="60_105"> ✓ </span>
                             <span class="filter_item"> Generation X (1965 - 1980) </span>
                         </div>
                         <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `Millenial`, [`60_106`])">
-                            <span class="enabled_check" id="60_106"> ✓ </span>
+                            <span class="enabled_check showCheck" id="60_106"> ✓ </span>
                             <span class="filter_item"> Millenials (1981 - 1996) </span>
                         </div>
                         <div class="filter_item_container item_wide" onclick="updateParameters(`generation`, `GenZ`, [`60_107`])">
-                            <span class="enabled_check" id="60_107"> ✓ </span>
+                            <span class="enabled_check showCheck" id="60_107"> ✓ </span>
                             <span class="filter_item"> Generation Z (1997 - 2021) </span>
                         </div>
                     </div>
@@ -119,7 +111,7 @@
             <div style="height: 700px;">
                 <canvas class="myChart" id="myChart"></canvas>
             </div>
-            <div style="padding: 20px; font-size: 14px;"> * All means have been rescaled to range from 0 to 10. The upper bound represents more liberal attitudes, while the lower bound represents more conservative attitudes. The questions with which these scales are constructed can be found below.  </div>
+            <div style="padding: 20px; font-size: 14px;"> * All means have been rescaled to range from 0 to 10. The upper bound represents more liberal attitudes, while the lower bound represents more conservative attitudes. The questions with which these scales are constructed can be found below. </div>
         </div>
         <div class="extraInfoContainer">
             <div id="abscale_extra">
