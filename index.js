@@ -185,13 +185,12 @@ const updateChart = (data) => {
 	scatterChart.data.datasets.forEach(set => {
 		labels.push(set["label"])
 	})
-
+	// Using current labels to determine what is not being used 
     data.forEach(d => {
         if (!labels.includes(d["label"])) {
             scatterChart.data.datasets.push(d)
         }
     })
-    // clearGlobal()
     scatterChart.update()
 }
 
@@ -336,7 +335,7 @@ const selectLabel = (id, dataset) => {
 	active_parameters = {
     active_genders: [],
     active_pol: [],
-    active_generation: ["Silent", "Lost", "Greatest", "Boomers", "GenX", "Millenial", "GenZ"]
+    active_generation: ["Lost", "Greatest", "Silent", "Boomers", "GenX", "Millenial", "GenZ"]
 	}
 	defaultIds.forEach(id => {
 		checkTheCheck(id, true)
@@ -358,3 +357,4 @@ const selectStat = (id, stat) => {
 }
 
 selectData()
+
