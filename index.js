@@ -228,7 +228,7 @@ var scatterChart = new Chart(ctx, {
         maintainAspectRatio: false,
         title: {
             display: true,
-            text: "Gender Attitude Explorer"
+            text: ["Gender Attitude Explorer", "\n", "Select below labels to filter chart"]
         },
         legend: {
             display: true,
