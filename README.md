@@ -28,7 +28,7 @@
 2. All data visualization was done using [Chart.js](https://www.chartjs.org/).    
 3. README.md file created using [Markdown Preview](https://github.com/facelessuser/MarkdownPreview), created and maintained by [Isaac Muse](https://github.com/facelessuser).
 4. Attitude Charts use dependent variables that have been rescaled to range from 0 to 10. For a complete explanation of how scaling works, see [here](#3-attitude-scale-construction).
-5. Generations were coded using the follow birth year ranges:
+5. Generations were coded using the follow birth-year ranges:
 ```
     Lost Generation:  1890 - 1909
 Greatest Generation:  1910 - 1927
@@ -48,7 +48,7 @@ To use GAET, please click [here](https://micahrcm.github.io/Gender-Attitude-Expl
 ##### a. What is GAET
 
 [GAET](https://micahrcm.github.io/Gender-Attitude-Explorer/) is a tool we developed to (1) encourage interaction with the data and (2) expedite the process of creating compact data visualizations for projects with many datasets.
-In this instance, we have generated gender attitude trend lines in four domains: Abortion, Sexual Behavior, Political Gender Roles, and Family Responsibilities. These trends lines reflect the mean, standard deviation, and frequency of GSS respondent data from 1973 - 2018. Additionally, the trend lines may be filtered by generation, gender, and political alignment. Using this tool, we are easily able to quickly generate visualizations of *N* trend lines:  
+In this instance, we have generated gender attitude trend lines in four domains: Abortion, Sexual Behavior, Political Gender Roles, and Family Responsibilities. These trends lines reflect the mean, standard deviation, and frequency of GSS respondent data from 1973 to 2018. Additionally, the trend lines may be filtered by generation, gender, and political alignment. Using this tool, we are easily able to quickly generate visualizations of *N* trend lines:  
 
 ```
 N = (Num demographic groups)! × (Num demographic subgroups) × (Num Domains) × (Statistic Types)
@@ -65,13 +65,13 @@ In total, this dataset produces 1,152 distinct trend lines
 ```
 1,152 = 3! × 12 × 4 × 3  
 ```
-However, it would be simple to add another demographic group resulting in access to thousands of additional trend lines. For example, an additional Demographic Group containing 5 subcategories, such as religion, would result in 4,896 trend lines:  
+However, it would be simple to add another demographic group resulting in access to thousands of additional trend lines. For example, an additional Demographic Group that contains 5 additional subcategories, such as Religion, would result in 4,896 trend lines:  
 ```
 4,894 = 4! x 17 x 4 x 3  
 ```
 ##### b. How to use GAET
 
-1) Select desired domain and statistic type, found at the top of the tool:
+1) To plot trend lines, select the desired domain and statistic type, found at the top of the tool:
 
 <br>
 
@@ -79,7 +79,7 @@ However, it would be simple to add another demographic group resulting in access
 
 <br>
 
-2) Clear the chart's contents by clicking the *Reset* button. Add lines by selecting items in the filter by clicking the *Generate* button:
+2) Clear the chart's contents by clicking the *Reset* button. Add lines by selecting items in the filter and then: Add lines by selecting items in the Filter and then clicking the *Generate* button:
 
 <br> 
 
@@ -151,10 +151,10 @@ Now I'm going to read several more statements. As I read each one, please tell m
 
 #### 3. Attitude Scale Construction
 
-Attitude scores are calculated for each respondent based on their GSS response to the questions in the dependent variables section above. As an example, the abortion scale is comprised of 7 yes or no questions. For each question a respondent answers with a view that is in support of abortion, they are awarded a point. **For example:**  
+Attitude scores are calculated for each respondent based on their GSS response to the questions in the dependent variables section above. As an example, the abortion scale is comprised of 7 yes or no questions. For each question a respondent answers with a view that is in support of abortion, they are assigned a point. **For example:**  
 
-If a respondent answers 5 out of 7 abortion attitude questions in support of abortion, they score 5 points on the abortion scale. That score is then divided by the total number of questions in the scale divided by 10, in order to rescale all scores to fall into a standard 0 to 10 range. In this case, because there are 7 questions, the respondents score would be divided by 0.7, resulting in a final score of approximately 7.143.  
+If a respondent answers 5 out of 7 abortion attitude questions in support of abortion, they score 5 points on the abortion scale. That score is then divided by the total number of questions in the scale divided by 10, in order to rescale all scores to fall into a standard 0 to 10 range. In this case, because there are 7 questions, the respondent's score would be divided by 0.7, resulting in a final score of approximately 7.143.  
 
-Any respondent who chose not to answer a question, or gave a non-answer response such as "I don't know" is dropped from the scale of which they gave the non-answer. Other respondents, such as oversampled groups are also excluded, so as to show more representative attitude scores.  
+Any respondent who chose not to answer a question or gave a non-answer response such as "I don't know" is dropped from the scale of which they gave the non-answer. Other respondents, such as oversampled groups, are also excluded, so as to reflect more representative attitude scores.  
 
 The code to create, sort, and filter the scales for this project can be found [here](./do/1_new_variable_filter.do).  
