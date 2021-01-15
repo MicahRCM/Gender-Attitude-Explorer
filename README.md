@@ -13,18 +13,10 @@
 2. [Dependent Variables](#2-dependent-variable-question-phrasing)  
 	a. [Abortion Attitudes Question Phrasing](#a-abortion-attitudes-question-phrasing)  
 	b. [Sexual Behavior Attitudes Question Phrasing](#b-sexual-behavior-attitudes-question-phrasing)  
-	c. [Gender Role Attitudes Question Phrasing](#c-gender-roles-attitudes-question-phrasing)  
+	c. [Political Gender Roles Attitudes Question Phrasing](#c-political-gender-roles-attitudes-question-phrasing)  
 	d. [Family Responsibilities Attitudes Question Phrasing](#d-family-responsibilities-attitudes-question-phrasing)  
 	
-3. [Attitude Scale Construction](#3-attitude-scale-construction)  
-	a. [Mean Abortion Attitudes by Race](#a-mean-abortion-attitudes-by-race)  
-	b. [Standard Deviation of Abortion Attitudes by Race](#b-standard-deviation-of-abortion-attitudes-by-race)  
-	c. [Mean Sexual Behavior Attitudes by Race](#c-mean-sexual-behavior-attitudes-by-race)  
-	d. [Standard Deviation of Sexual Behavior Attitudes by Race](#d-standard-deviation-of-sexual-behavior-attitudes-by-race)  
-	e. [Mean Gender Role Attitudes by Race](#e-mean-gender-role-attitudes-by-race)  
-	f. [Standard Deviation of Gender Role Attitudes by Race](#f-standard-deviation-of-gender-role-attitudes-by-race)  
-	g. [Mean Family Responsibilities Attitudes by Race](#g-mean-family-responsibilities-attitudes-by-race)  
-	h. [Standard Deviation of Family Responsibilities Attitudes by Race](#h-standard-deviation-of-family-responsibilities-attitudes-by-race)   
+3. [Attitude Scale Construction](#3-attitude-scale-construction)    
 
 <hr>
 
@@ -36,13 +28,13 @@
 4. Attitude Charts use dependent variables that have been rescaled to range from 0 to 10. For a complete explanation of how scaling works, see [here](#3-attitude-scale-construction).
 5. Generations were coded using the follow birth year ranges:
 ```
-    Lost Generation:    1890 - 1909
-Greatest Generation:    1910 - 1927
-  Silent Generation:    1928 - 1945
-            Boomers:    1946 - 1964
-       Generation X:    1965 - 1980
-         Millenials:    1981 - 1996
-       Generation Z:    1997 - 2012
+    Lost Generation:  1890 - 1909
+Greatest Generation:  1910 - 1927
+  Silent Generation:  1928 - 1945
+            Boomers:  1946 - 1964
+       Generation X:  1965 - 1980
+         Millenials:  1981 - 1996
+       Generation Z:  1997 - 2012
 ``` 
 
 <hr>
@@ -55,9 +47,9 @@ GAET is a tool we developed to (1) encourage interaction with the data and (2) e
 In this instance, we have generated gender attitude trend lines in four domains: Abortion, Sexual Behavior, Political Gender Roles, and Family Responsibilities. These trends lines reflect the mean, standard deviation, and frequency of GSS respondent data from 1973 - 2018. Additionally, the trend lines may be filtered by generation, gender, and political alignment. Using this tool, we are easily able to quickly generate visualizations of *N* trend lines:  
 
 ```
-N = (Number of demographic groups)! × (Number of demographic subgroups) × (Number of Domains) × (Statistic Types)
+N = (Num demographic groups)! × (Num demographic subgroups) × (Num Domains) × (Statistic Types)
 ```
-In this case, there are a total of:
+In this visualization, there are a total of:
 ```  
 3 Demographic Groups (Political views, Gender, and Generation)  
 12 Demographic subgroups (Conservative, Liberal, Moderate, Men, Women, Lost Gen., Greatest Gen., etc.)  
@@ -155,10 +147,10 @@ Now I'm going to read several more statements. As I read each one, please tell m
 
 #### 3. Attitude Scale Construction
 
-Attitude scores are calculated for each respondent based on their GSS response to the questions in the dependent variables section above. For example, the abortion scale is comprised of 7 yes or no questions. For each question a respondent answers with a view that is in support of abortion, they are awarded a point. For example:  
+Attitude scores are calculated for each respondent based on their GSS response to the questions in the dependent variables section above. As an example, the abortion scale is comprised of 7 yes or no questions. For each question a respondent answers with a view that is in support of abortion, they are awarded a point. **For example:**  
 
 If a respondent answers 5 out of 7 abortion attitude questions in support of abortion, they score 5 points on the abortion scale. That score is then divided by the total number of questions in the scale divided by 10, in order to rescale all scores to fall into a standard 0 to 10 range. In this case, because there are 7 questions, the respondents score would be divided by 0.7, resulting in a final score of approximately 7.143.  
 
 Any respondent who chose not to answer a question, or gave a non-answer response such as "I don't know" is dropped from the scale of which they gave the non-answer. Other respondents, such as oversampled groups are also excluded, so as to show more representative attitude scores.  
 
-The code to create the scales for this project can be found [here]().  
+The code to create, sort, and filter the scales for this project can be found [here](./do/1_new_variable_filter.do).  
