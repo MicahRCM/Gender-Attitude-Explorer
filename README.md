@@ -1,3 +1,5 @@
+# Looking for the Gender Attitude Explorer Tool? [Click here!](https://micahrcm.github.io/Gender-Attitude-Explorer/)
+
 ## [Appendices] Gender Attitudes by Generation
 
 ### Table of Contents 
@@ -41,9 +43,11 @@ Greatest Generation:  1910 - 1927
 
 #### 1. Gender Attitude Explorer Tool (GAET)
 
+To use GAET, please click [here](https://micahrcm.github.io/Gender-Attitude-Explorer/)
+
 ##### a. What is GAET
 
-GAET is a tool we developed to (1) encourage interaction with the data and (2) expedite the process of creating compact data visualizations for projects with many datasets.
+[GAET](https://micahrcm.github.io/Gender-Attitude-Explorer/) is a tool we developed to (1) encourage interaction with the data and (2) expedite the process of creating compact data visualizations for projects with many datasets.
 In this instance, we have generated gender attitude trend lines in four domains: Abortion, Sexual Behavior, Political Gender Roles, and Family Responsibilities. These trends lines reflect the mean, standard deviation, and frequency of GSS respondent data from 1973 - 2018. Additionally, the trend lines may be filtered by generation, gender, and political alignment. Using this tool, we are easily able to quickly generate visualizations of *N* trend lines:  
 
 ```
@@ -51,10 +55,10 @@ N = (Num demographic groups)! × (Num demographic subgroups) × (Num Domains) ×
 ```
 In this visualization, there are a total of:
 ```  
-3 Demographic Groups (Political views, Gender, and Generation)  
-12 Demographic subgroups (Conservative, Liberal, Moderate, Men, Women, Lost Gen., Greatest Gen., etc.)  
-4 Domains (Abortion, Sexual Behavior, Political Gender Roles, and Family Responsibilities)  
-3 Statistic Types (Mean, Standard Deviation, Frequency)  
+ 3  Demographic Groups (Political views, Gender, and Generation)  
+12  Demographic subgroups (Conservative, Liberal, Moderate, Men, Women, Lost Gen., Millenials, etc.)  
+ 4  Domains (Abortion, Sexual Behavior, Political Gender Roles, and Family Responsibilities)  
+ 3  Statistic Types (Mean, Standard Deviation, Frequency)  
 ```   
 
 In total, this dataset produces 1,152 distinct trend lines  
@@ -100,7 +104,7 @@ However, it would be simple to add another demographic group resulting in access
 
 ##### c. GAET Code Base
 
-This tool can be quickly repurposed to display any summary statistic trends. A link to the code base can be found here.
+This tool can be quickly repurposed to display any summary statistic trends. A link to the code base can be found [here](./do/GAET.zip).
 
 <hr>
 
