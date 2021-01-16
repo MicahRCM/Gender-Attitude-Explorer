@@ -6,13 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gender Attitudes Explorer</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
@@ -26,7 +22,7 @@
                 Sexual Behavior
             </div>
             <div id="genrole_lab" class="scaleContainer" onclick="selectLabel(this.id, `genrole`)">
-                Gender Roles
+                Political Gender Roles
             </div>
             <div id="famresp_lab" class="scaleContainer" onclick="selectLabel(this.id, `famresp`)">
                 Family Responsibilities
@@ -118,25 +114,25 @@
                 <h3> Abortion Attitude Question Phrasing (α = 0.89) </h3>
                 <ol>
                     <li>
-                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the family has a very low income and cannot afford any more children? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/604/vshow" rel="nofollow">abpoor</a>)</p>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the family has a very low income and cannot afford any more children? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/604/vshow">abpoor</a>)</p>
                     </li>
                     <li>
-                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the woman's own health is seriously endangered by the pregnancy? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/603/vshow" rel="nofollow">abhlth</a>)</p>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the woman's own health is seriously endangered by the pregnancy? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/603/vshow">abhlth</a>)</p>
                     </li>
                     <li>
-                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she is married and does not want any more children? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/602/vshow" rel="nofollow">abnomore</a>)</p>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she is married and does not want any more children? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/602/vshow">abnomore</a>)</p>
                     </li>
                     <li>
-                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if there is a strong chance of serious defect in the baby? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/601/vshow" rel="nofollow">abdefect</a>)</p>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if there is a strong chance of serious defect in the baby? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/601/vshow">abdefect</a>)</p>
                     </li>
                     <li>
-                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she became pregnant as a result of rape? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/605/vshow" rel="nofollow">abrape</a>)</p>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she became pregnant as a result of rape? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/605/vshow">abrape</a>)</p>
                     </li>
                     <li>
-                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she is not married and does not want to marry the man? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/606/vshow" rel="nofollow">absingle</a>)</p>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if she is not married and does not want to marry the man? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/606/vshow">absingle</a>)</p>
                     </li>
                     <li>
-                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the woman wants it for any reason? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/607/vshow" rel="nofollow">abany</a>)</p>
+                        <p>Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the woman wants it for any reason? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/607/vshow">abany</a>)</p>
                     </li>
                 </ol>
             </div>
@@ -144,39 +140,39 @@
                 <h3> Sexual Behavior Attitudes Question Phrasing (α = 0.66) </h3>
                 <ol>
                     <li>
-                        <p>Would you be for or against sex education in the public schools? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/626/vshow" rel="nofollow">sexeduc</a>)</p>
+                        <p>Would you be for or against sex education in the public schools? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/626/vshow">sexeduc</a>)</p>
                     </li>
                     <li>
-                        <p>There's been a lot of discussion about the way morals and attitudes about sex are changing in this country. If a man and woman have sex relations before marriage, do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/631/vshow" rel="nofollow">premarsx</a>)</p>
+                        <p>There's been a lot of discussion about the way morals and attitudes about sex are changing in this country. If a man and woman have sex relations before marriage, do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/631/vshow">premarsx</a>)</p>
                     </li>
                     <li>
-                        <p>Questions associated with this variable: There's been a lot of discussion about the way morals and attitudes about sex are changing in this country. If a man and woman have sex relations before marriage, do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? A. What if they are in their early teens, say 14 to 16 years old? In that case, do you think sex relations before marriage are always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/632/vshow" rel="nofollow">teensex</a>)</p>
+                        <p>Questions associated with this variable: There's been a lot of discussion about the way morals and attitudes about sex are changing in this country. If a man and woman have sex relations before marriage, do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? A. What if they are in their early teens, say 14 to 16 years old? In that case, do you think sex relations before marriage are always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/632/vshow">teensex</a>)</p>
                     </li>
                     <li>
-                        <p>What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/634/vshow" rel="nofollow">homosex</a>)</p>
+                        <p>What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/634/vshow">homosex</a>)</p>
                     </li>
                     <li>
-                        <p>What is your opinion about a married person having sexual relations with someone other than the marriage partner--is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/633/vshow" rel="nofollow">xmarsex</a>)</p>
+                        <p>What is your opinion about a married person having sexual relations with someone other than the marriage partner--is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all? (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/633/vshow">xmarsex</a>)</p>
                     </li>
                 </ol>
             </div>
             <div id="genrole_extra" class="hide">
                 <h3> Gender Roles Attitudes Question Phrasing </h3>
                 <ol>
-                    <li>Tell me if you agree or disagree with this statement: Most men are better suited emotionally for politics than are most women. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/591/vshow" rel="nofollow">fepol</a>)</li>
+                    <li>Tell me if you agree or disagree with this statement: Most men are better suited emotionally for politics than are most women. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/591/vshow">fepol</a>)</li>
                 </ol>
             </div>
             <div id="famresp_extra" class="hide">
                 <h3> Family Responsibility Attitudes Question Phrasing (α‎ = 0.73) </h3>
                 <ol>
                     <li>
-                        <p>A working mother can establish just as warm and secure a relationship with her children as a mother who does not work. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/703/vshow" rel="nofollow">fechld</a>)</p>
+                        <p>A working mother can establish just as warm and secure a relationship with her children as a mother who does not work. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/703/vshow">fechld</a>)</p>
                     </li>
                     <li>
-                        <p>A preschool child is likely to suffer if his or her mother works. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/705/vshow" rel="nofollow">fepresch</a>)</p>
+                        <p>A preschool child is likely to suffer if his or her mother works. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/705/vshow">fepresch</a>)</p>
                     </li>
                     <li>
-                        <p>It is much better for everyone involved if the man is the achiever outside the home and the woman takes care of the home and family. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/706/vshow" rel="nofollow">fefam</a>)</p>
+                        <p>It is much better for everyone involved if the man is the achiever outside the home and the woman takes care of the home and family. (<strong>GSS Variable:</strong> <a href="https://gssdataexplorer.norc.org/variables/706/vshow">fefam</a>)</p>
                     </li>
                 </ol>
             </div>
@@ -185,8 +181,6 @@
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script> -->
 </body>
 
 </html>
